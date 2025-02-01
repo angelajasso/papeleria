@@ -3,11 +3,69 @@ $secundary-color:#988581;
 $tertiary-color:#EECBC4;
 $white-color:#FFEAE6;
 $black-color: #2C2221;
-$font-stack: 'open sans' , sans-serif; 
+$font-stack: 'open sans' , sans-serif;
+$paragraph-size: 1.5rem; 
+$tablet: 600px;
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border-style: none;
+    }
+}
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color:$primary-color;
+    font-family: $font-stack;
 }
+
+nav {
+    width: auto;
+    @include flexCenter(row, space-between , center);
+    color: $black-color;
+    padding: 15px;
+
+    h1 {
+        font-size: $paragraph-size;
+        padding-left: 15px;
+        color: $black-color;
+        text-shadow:  $secundary-color ;
+    }
+
+    .menu {
+        display: flex;
+        gap: 15px;
+        @include buttonStyle;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+// Estilos para tablets
+@media (min-width: $tablet) {
+    nav {
+        .menu {
+            display: none;
+        }
+    
+        .icons {
+            display: flex;
+            gap: 15px;
+            @include buttonStyle;
+        }
+    }
+  }
+  
 
