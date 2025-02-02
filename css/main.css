@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   background-color: #E6D0CB;
   font-family: "open sans", sans-serif;
+  color: #2C2221;
 }
 
 nav {
@@ -12,14 +13,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: #2C2221;
   padding: 15px;
 }
 nav h1 {
   font-size: 1.5rem;
   padding-left: 15px;
   color: #2C2221;
-  text-shadow: #988581;
 }
 nav .menu {
   display: flex;
@@ -31,6 +30,46 @@ nav .menu button {
 }
 nav .icons {
   display: none;
+}
+
+article {
+  width: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  display: flex;
+  flex-direction: column;
+}
+article .impact-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 25px;
+}
+article h2 {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+article h3 {
+  font-size: 1.5rem;
+}
+article button {
+  width: 40vw;
+  padding: 20px;
+  background-color: #2C2221;
+  border-style: none;
+  border-radius: 20px;
+  color: #FFEAE6;
+  font-size: 1rem;
+}
+article .image-section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  gap: 25px;
+}
+article img {
+  border-radius: 20px;
 }
 
 @media (min-width: 600px) {

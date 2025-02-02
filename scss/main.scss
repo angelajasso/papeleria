@@ -27,19 +27,18 @@ body {
     box-sizing: border-box;
     background-color:$primary-color;
     font-family: $font-stack;
+    color: $black-color;
 }
 
 nav {
     width: auto;
     @include flexCenter(row, space-between , center);
-    color: $black-color;
     padding: 15px;
 
     h1 {
         font-size: $paragraph-size;
         padding-left: 15px;
         color: $black-color;
-        text-shadow:  $secundary-color ;
     }
 
     .menu {
@@ -52,6 +51,51 @@ nav {
         display: none;
     }
 }
+
+article {
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    flex-direction: column;
+
+    .impact-section{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 25px;
+    }
+
+    h2 {
+        font-size: 3rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: $paragraph-size;
+    }
+
+    button {
+        width: 40vw;
+        padding: 20px;
+        background-color: $black-color;
+        border-style: none;
+        border-radius: 20px;
+        color: $white-color;
+        font-size: 1rem;
+    }
+    .image-section{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+        gap: 25px;
+    }
+    img {
+        border-radius: 20px;
+    }
+}
+
 
 // Estilos para tablets
 @media (min-width: $tablet) {
