@@ -1,7 +1,14 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
   background-color: #E6D0CB;
   font-family: "open sans", sans-serif;
   color: #2C2221;
@@ -13,7 +20,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 1.5rem;
 }
 nav h1 {
   font-size: 1.5rem;
@@ -23,6 +30,7 @@ nav h1 {
 nav .menu {
   display: flex;
   gap: 15px;
+  padding-right: 3rem;
 }
 nav .menu button {
   background: none;
@@ -34,8 +42,8 @@ nav .icons {
 
 article {
   width: auto;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 5rem;
+  padding-right: 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -46,7 +54,7 @@ article .impact-section {
   gap: 25px;
 }
 article h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0;
   margin: 0;
 }
@@ -73,15 +81,59 @@ article img {
 }
 
 @media (min-width: 600px) {
+  nav {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  nav h1 {
+    font-size: 3rem;
+    padding-left: 3rem;
+  }
   nav .menu {
     display: none;
   }
   nav .icons {
     display: flex;
     gap: 15px;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   nav .icons button {
     background: none;
     border-style: none;
+  }
+  article {
+    display: flex;
+    flex-direction: row;
+  }
+  article .impact-section {
+    display: flex;
+    margin-right: 5rem;
+    gap: 5rem;
+    justify-content: center;
+    padding: 0;
+  }
+  article h2 {
+    font-size: 4rem;
+  }
+  article h3 {
+    font-size: 3rem;
+  }
+  article .image-section {
+    width: 60vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 25px;
+  }
+  article button {
+    width: 20vw;
   }
 }/*# sourceMappingURL=main.css.map */

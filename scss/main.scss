@@ -21,10 +21,17 @@ $tablet: 600px;
     }
 }
 
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
     background-color:$primary-color;
     font-family: $font-stack;
     color: $black-color;
@@ -33,7 +40,7 @@ body {
 nav {
     width: auto;
     @include flexCenter(row, space-between , center);
-    padding: 15px;
+    padding: $paragraph-size;
 
     h1 {
         font-size: $paragraph-size;
@@ -45,6 +52,7 @@ nav {
         display: flex;
         gap: 15px;
         @include buttonStyle;
+        padding-right: $paragraph-size * 2;
     }
 
     .icons {
@@ -54,8 +62,8 @@ nav {
 
 article {
     width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 5rem;
+    padding-right: 5rem;
     display: flex;
     flex-direction: column;
 
@@ -67,7 +75,7 @@ article {
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 0;
         margin: 0;
     }
@@ -99,7 +107,17 @@ article {
 
 // Estilos para tablets
 @media (min-width: $tablet) {
+
     nav {
+        width: auto;
+        @include flexCenter(row, space-between , center);
+        padding: $paragraph-size;
+    
+        h1 {
+            font-size: $paragraph-size * 2;
+            padding-left: 3rem;
+        }
+    
         .menu {
             display: none;
         }
@@ -108,8 +126,42 @@ article {
             display: flex;
             gap: 15px;
             @include buttonStyle;
+            padding-right: $paragraph-size * 2;
+            @include flexCenter(row, space-between , center);
         }
     }
-  }
-  
+
+    article {
+        display: flex;
+        flex-direction: row;
+    
+        .impact-section{
+            display: flex;
+            margin-right: 5rem;
+            gap: 5rem;
+            justify-content: center;
+            padding: 0;
+        }
+    
+        h2 {
+            font-size: 4rem;
+        }
+    
+        h3 {
+            font-size: $paragraph-size * 2;
+        }
+
+        .image-section{
+            width: 60vh;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0;
+            gap: 25px;
+        }
+
+        button {
+            width: 20vw;
+        }
+    }
+}  
 
