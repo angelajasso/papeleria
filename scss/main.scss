@@ -163,7 +163,26 @@ section {
     }
 }
 
+footer {
+    background-color: $secundary-color;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    color: $white-color;
 
+    h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 0 0 2rem 2rem;
+    }
+
+    ul {
+        list-style: none;
+        @include flexCenter(row,start ,center );
+        gap: 40px;
+        padding: 0 0 2rem 2rem;
+    }
+}
 
 
 // Estilos para tablets

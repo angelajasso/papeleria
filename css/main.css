@@ -141,6 +141,28 @@ section .furniture .product-card .product-image img {
   border-radius: 6px;
 }
 
+footer {
+  background-color: #988581;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  color: #FFEAE6;
+}
+footer h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 0 2rem 2rem;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+  padding: 0 0 2rem 2rem;
+}
+
 @media (min-width: 600px) {
   nav {
     width: auto;
